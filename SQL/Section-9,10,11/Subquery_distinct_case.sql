@@ -53,3 +53,20 @@ SELECT COUNT(DISTINCT name) FROM products;
 
 --119
 select count(distinct manufacturer) from phones;
+
+
+-- ***************************SECTION-10*******************************
+--121
+SELECT name,department,weight,GREATEST(40,3*weight) as shipping_cost FROM products; 
+
+--122
+SELECT LEAST(10,15,30);
+
+--123
+SELECT name, department, weight,
+CASE
+    WHEN weight < 15 THEN 'low'
+    WHEN weight < 25 THEN 'medium'
+    ELSE 'high'
+END as weight_status
+FROM products;
